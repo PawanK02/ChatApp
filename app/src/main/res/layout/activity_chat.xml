@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+
+        android:background="#FBFBFB"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <TextView
+            android:id="@+id/txtchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#100303"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/call"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            app:srcCompat="@android:drawable/ic_menu_call" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvchat"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_weight="1"
+        android:background="#D7DCE4"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/phtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/chatedt"
+            android:layout_width="432dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Type your message"
+            android:inputType="text" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="139dp"
+            android:layout_height="190dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
+
+</LinearLayout>
